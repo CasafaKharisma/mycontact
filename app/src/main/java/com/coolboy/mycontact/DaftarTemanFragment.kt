@@ -6,25 +6,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.tambahteman.*
+import kotlinx.android.synthetic.main.daftarteman.*
 
-class TambahTemanFragment: Fragment() {
+class DaftarTemanFragment: Fragment() {
 
     companion object {
-        fun newInstance(): TambahTemanFragment {
-            return TambahTemanFragment()
+        fun newInstance(): DaftarTemanFragment {
+            return DaftarTemanFragment()
         }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.tambahteman, container, false)
+        return inflater.inflate(R.layout.daftarteman, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnSimpan.setOnClickListener{
-            (activity as MainActivity).tampilDaftarTemanFragment()
+        fabAdd.setOnClickListener {
+            (activity as MainActivity).tampilTambahTemanFragment()
         }
     }
     override fun onDestroy() {
